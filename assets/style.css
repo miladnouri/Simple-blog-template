@@ -106,6 +106,13 @@ article p {
   color: #666;
 }
 
+/* Style the article info */
+.article-info {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
 /* Style the footer element */
 footer {
   background-color: #f2f2f2;
