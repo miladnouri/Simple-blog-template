@@ -1,79 +1,96 @@
+/* Import a font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Vazirmatn', sans-serif;
+/* Apply the following styles to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Use the 'Vazirmatn' font for all text */
+  font-family: 'Vazirmatn', sans-serif;
 }
 
+/* Set the background color and font size for the body element */
 body {
-background-color: #f2f2f2;
-font-size: 16px;
+  background-color: #f2f2f2;
+  font-size: 16px;
 }
 
+/* Style the header element */
 header {
-background-color: #333;
-color: #fff;
-padding: 1rem;
-text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
+/* Style the navigation list */
 nav ul {
-list-style: none;
-margin: 0;
-padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Style the navigation list items */
 nav li {
-display: inline-block;
-margin: 0 0.5rem;
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
+/* Style the navigation links */
 nav a {
-color: #fff;
-text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
+/* Style the navigation links on hover */
 nav a:hover {
-border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
+/* Style the h1 element */
 h1 {
-margin: 2rem 0;
-font-size: 3rem;
+  margin: 2rem 0;
+  font-size: 3rem;
 }
 
+/* Style the main content area */
 main {
-max-width: 900px;
-margin: 0 auto;
-padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
+/* Style the article element */
 article {
-background-color: #fff;
-padding: 2rem;
-margin-bottom: 2rem;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Style the article headings */
 article h2 {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
+/* Style the article heading links */
 article h2 a {
-color: #333;
-text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
+/* Style the article heading links on hover */
 article h2 a:hover {
-color: #666;
+  color: #666;
 }
 
+/* Style the article paragraphs */
 article p {
-line-height: 1.5;
+  line-height: 1.5;
 }
 
+/* Style the footer element */
 footer {
   background-color: #f2f2f2;
   color: #333;
@@ -82,10 +99,12 @@ footer {
   padding: 1rem;
 }
 
+/* Style the footer paragraphs */
 footer p {
   margin: 0.5rem 0;
 }
 
+/* Style the last footer paragraph */
 footer p:last-of-type {
   font-size: 0.7rem;
   margin: 0;
