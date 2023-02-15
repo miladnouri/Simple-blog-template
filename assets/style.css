@@ -24,6 +24,19 @@ header {
   text-align: center;
 }
 
+/* Style for the main heading in the header */
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0rem;
+}
+
+/* Style for the secondary heading in the header */
+header h2 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
 /* Style the navigation list */
 nav ul {
   list-style: none;
@@ -72,6 +85,7 @@ article {
 /* Style the article headings */
 article h2 {
   margin-bottom: 1rem;
+  font-size: 1.15rem;
 }
 
 /* Style the article heading links */
@@ -87,7 +101,9 @@ article h2 a:hover {
 
 /* Style the article paragraphs */
 article p {
+  font-size: 0.9rem;
   line-height: 1.5;
+  color: #666;
 }
 
 /* Style the footer element */
