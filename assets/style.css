@@ -1,6 +1,7 @@
-/* Import a font from Google Fonts */
+/* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+New&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 /* Apply the following styles to all elements */
 * {
   margin: 0;
@@ -26,7 +27,7 @@ header {
 
 /* Style for the main heading in the header */
 header h1 {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   margin-bottom: 0rem;
 }
 
@@ -37,11 +38,21 @@ header h2 {
   margin-bottom: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #666;
+}
+
 /* Style the navigation list */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0.96rem;
 }
 
 /* Style the navigation list items */
@@ -52,71 +63,173 @@ nav li {
 
 /* Style the navigation links */
 nav a {
-  color: #fff;
-  text-decoration: none;
+  color: #fff; 
 }
 
 /* Style the navigation links on hover */
 nav a:hover {
   border-bottom: 2px solid #fff;
+  color: #fff;
 }
 
-/* Style the h1 element */
+
+/* Style the dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  border-bottom: none;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* Style headings */
 h1 {
-  margin: 2rem 0;
-  font-size: 3rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
 }
 
 /* Style the main content area */
 main {
-  max-width: 900px;
+  width: 900px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
-/* Style the article element */
-article {
+
+/* Card */
+.card {
   background-color: #fff;
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the article headings */
-article h2 {
-  margin-bottom: 1rem;
-  font-size: 1.15rem;
-}
 
-/* Style the article heading links */
-article h2 a {
-  color: #333;
-  text-decoration: none;
-}
 
-/* Style the article heading links on hover */
-article h2 a:hover {
+/* Style the sidebar card titles */
+.sidebar-card-title {
+  border-bottom: 1px dashed #c1c2c3;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-right: -6px;
+  font-size: 0.85rem;
   color: #666;
 }
+
+.sidebar .card a {
+  font-size: 0.82rem;
+}
+
 
 /* Style the article paragraphs */
-article p {
+p, article p {
   font-size: 0.9rem;
-  line-height: 1.5;
-  color: #666;
+  line-height: 1.8;
+  color: #555;
+  margin: 1rem 0;
+}
+
+/* Style the article image */
+article img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+/* Style the audio and video elements */
+article audio,
+article video {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Style the code block */
+.code-block {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0 1rem;
+  overflow-x: auto;
+  text-align: left;
+  margin: 1rem;
+}
+
+/* Style the code snippet inside the code block */
+.code-block code {
+  font-family: 'Courier New', monospace;
+  text-align: left;
+}
+
+
+article img:hover {
+  max-width: 100%;
+  filter: grayscale(0);
+}
+
+.comments-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
 }
 
 /* Style the article info */
-.article-info {
+.article-info, .comment-info {
   font-size: 0.75rem;
   color: #888;
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
 }
 
 /* Style the footer element */
 footer {
   background-color: #f2f2f2;
-  color: #333;
+  color: #5c5c5c;
   font-size: 0.9rem;
   text-align: center;
   padding: 1rem;
@@ -127,9 +240,432 @@ footer p {
   margin: 0.5rem 0;
 }
 
+footer a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 /* Style the last footer paragraph */
 footer p:last-of-type {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin: 0;
   padding: 0;
+}
+
+
+
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* Common styles for all social media boxes */
+.social-box {
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+.social-box:hover {
+  filter: grayscale(0);
+  color: #fff;
+}
+/* Styles for each social media box */
+.twitter {
+  background-color: #1da1f2;
+}
+
+.telegram {
+  background-color: #0088cc;
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.instagram {
+  background-color: #e4405f;
+  margin-bottom: 2rem;
+}
+
+
+/* Adjust the sidebar for larger screens */
+@media screen and (min-width: 768px) {
+  .sidebar {
+      flex: 0 0 calc(20% - 2rem);
+      max-width: calc(20% - 2rem);
+  }
+
+  main{
+    padding: 0 1rem;
+
+  }
+
+  /* Adjust the social media boxes for larger screens */
+  .social-box {
+    max-width: 100%;
+  }
+}
+
+
+
+/* Additional styles for the Contact page form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+
+
+/* Style the about text and photo */
+.about-text {
+  min-height: 220px;
+}
+
+.about-photo {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  float: left;
+  margin: 0.5rem;
+}
+
+
+
+/* Style the donation section buttons */
+.donation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.donation-button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  flex: 0 0 calc(49% - 10px);
+  text-align: center;
+}
+
+/* Style the donation buttons on hover */
+.donation-button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Style the specific donation buttons */
+.paypal {
+  background-color: #009cde;
+}
+
+.bitcoin {
+  background-color: #f7931a;
+}
+
+.ethereum {
+  background-color: #48cbd9;
+}
+
+.dogecoin {
+  background-color: #ba9f33;
+}
+
+
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+.photo:hover {
+  filter: grayscale(0);
+}
+
+.photo img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.caption h3, .caption p {
+  margin: 0;
+  padding: 0;
+}
+
+.caption h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.caption p {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+
+
+/* Style the tags list */
+.tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.sidebar .tags-list {
+  text-align: center;
+}
+
+/* Style each tag */
+.tags-list li {
+  display: inline-block;
+  margin: 0.5rem 0.1rem;
+}
+
+/* Style the link inside the tag */
+.tags-list li a {
+  background-color: #f1f3f4;
+  color: #555;
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Style the link on hover */
+.tags-list li a:hover {
+  background-color: #eaeaea;
+}
+
+
+
+
+
+
+
+
+/* Article Tags and Share Buttons */
+.article-tags,
+.share-buttons {
+  margin-top: 2rem;
+}
+
+.article-tags h3,
+.share-buttons h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.article-tags .tags-list,
+.share-buttons .social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-tags .tags-list li,
+.share-buttons .social-list li {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.article-tags .tags-list li a,
+.share-buttons .social-list li a {
+  background-color: #f1f3f4;
+  color: #555;
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+
+/* simple related articles */
+.related-articles-list{
+  margin: 1rem;
+}
+
+/* Style for related articles section */
+.related-articles {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.related-article {
+  margin-bottom: 1.2rem;
+}
+
+.related-article p {
+  margin: 0;
+}
+
+
+
+/* Share Buttons */
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-list li {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.social-list li a {
+  background-color: #f1f3f4;
+  color: #555;
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+.social-list li a:hover {
+  background-color: #eaeaea;
+}
+
+
+/* error pages */
+.error {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.error h1 {
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
+}
+
+.error p {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+}
+
+
+
+/* faq */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.answer p {
+  margin: 0;
+}
+
+.question.active {
+  font-weight: bold;
+}
+
+.question.active + .answer {
+  display: block;
 }
