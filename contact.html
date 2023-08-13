@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="assets/style.css?v=1.0">
+</head>
+
+<body>
+  <header>
+    <!-- Website header -->
+    <h1>وبلاگ من</h1>
+    <h2>زیرعنوان وبلاگ من</h2>
+    <nav>
+      <!-- Navigation menu -->
+      <ul>
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="about.html">درباره من</a></li>
+        <li><a href="contact.html">تماس با ما</a></li>
+        <li><a href="articles.html">مقالات</a></li>
+        <li><a href="page.html">صفحه متنی</a></li>
+        <li><a href="gallery.html">گالری</a></li>
+        <li class="dropdown">
+          <a href="#">منوی بازشو</a>
+          <ul class="dropdown-content">
+            <li><a href="#">منوی اول</a></li>
+            <li><a href="#">منوی دوم</a></li>
+            <li><a href="#">منوی سوم</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container">
+      <!-- Main content section -->
+      <main>
+        <section class="contact-section card">
+          <h2>تماس با ما</h2>
+          <p>برای ارتباط با ما، لطفاً فرم زیر را پر کنید یا از اطلاعات تماس ما استفاده کنید.</p>
+          
+          <div class="contact-info">
+              <p><strong>آدرس ایمیل:</strong> <span class="email">info@example.com</span></p>
+              <p><strong>تلفن:</strong> 123-456-7890</p>
+              <p><strong>آدرس:</strong> تهران، خیابان مثال، کوچه تست، پلاک 123</p>
+          </div>
+
+          <form class="contact-form" action="submit_contact_form.php" method="post">
+              <label for="name">نام:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">ایمیل:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="message">پیام:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">ارسال پیام</button>
+          </form>
+        </section>
+      </main>
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <!-- Social media boxes -->
+      <a class="social-box twitter" href="https://twitter.com/" target="_blank">
+        توییتر من
+      </a>
+      <a class="social-box telegram" href="https://telegram.org/" target="_blank">
+        کانال تلگرام
+      </a>
+      <a class="social-box youtube" href="https://www.youtube.com/" target="_blank">
+        کانال یوتوب
+      </a>
+      <a class="social-box instagram" href="https://www.instagram.com/" target="_blank">
+       اینستاگرام من
+      </a>
+
+      <div class="card">
+        <form method="get" action="#">
+          <input type="text" placeholder="جستجوی نوشته‌ها...">
+          <button type="submit">>></button>
+        </form>
+
+      </div>
+
+      <div class="card">
+        <h5 class="sidebar-card-title">دسته‌بندی‌ها</h5>
+        <ul>
+          <li><a href="index.html">تکنولوژی</a></li>
+          <li><a href="index.html">گجت‌ها</a></li>
+          <li><a href="index.html">نرم‌افزار</a></li>
+          <li><a href="index.html">هوش مصنوعی</a></li>
+          <li><a href="index.html">اینترنت اشیاء (IoT)</a></li>
+          <li><a href="index.html">امنیت اطلاعات</a></li>
+          <li><a href="index.html">بلاک‌چین</a></li>
+          <!-- Add more categories as needed -->
+        </ul>
+      </div>
+
+      <div class="card">
+        <h5 class="sidebar-card-title">سال‌های قبل در چنین روزی</h5>
+        <ul>
+          <li><a href="#">تکنولوژی‌های نوظهور در دنیای اینترنت اشیاء</a></li>
+          <li><a href="#">آخرین روند‌ها در توسعه‌ی نرم‌افزارهای مبتنی بر هوش مصنوعی</a></li>
+          <li><a href="#">چالش‌ها و راهکارهای امنیت سایبری در دنیای ارتباطات هوشمند</a></li>
+          <li><a href="#">جهش‌های بزرگ در تکنولوژی‌های رایانه‌ای و شبکه‌های پرسرعت</a></li>
+          <li><a href="#">کاربردهای جدید فناوری بلاکچین در صنعت‌های مختلف</a></li>
+        </ul>
+      </div>
+      
+
+      <div class="card">
+        <h5 class="sidebar-card-title">آخرین گفتگوهای من</h5>
+        <ul>
+          <li><a href="#">گفت‌و‌گو با مهندس نرم‌افزار درباره آینده‌ی هوش مصنوعی</a></li>
+          <li><a href="#">مصاحبه با مخترع اینترنت اشیاء در مورد ارتباطات هوشمند</a></li>
+          <li><a href="#">گفت‌و‌گو با دیزاینر UI/UX درباره آخرین ترند‌های طراحی وب</a></li>
+          <li><a href="#">مصاحبه با دانشمند داده‌ها در مورد تحلیل‌های پیشرفته</a></li>
+        </ul>
+      </div>
+      
+
+      <!-- Tags Section -->
+      <div class="card">
+        <h5 class="sidebar-card-title">برچسب‌ها</h5>
+        <ul class="tags-list">
+          <li><a href="#">تکنولوژی</a></li>
+          <li><a href="#">برنامه‌نویسی</a></li>
+          <li><a href="#">شبکه‌ها</a></li>
+          <li><a href="#">امنیت</a></li>
+          <li><a href="#">هوش مصنوعی</a></li>
+          <li><a href="#">انترنت اشیاء</a></li>
+          <li><a href="#">اندروید</a></li>
+          <li><a href="#">iOS</a></li>
+          <li><a href="#">تجارت الکترونیک</a></li>
+          <li><a href="#">بلاکچین</a></li>
+        </ul>
+      </div>
+
+    </aside>
+      </div>
+
+
+    <footer>
+      <!-- Website footer -->
+      <p>تمامی حقوق محفوظ است. © ۱۴۰۱</p>
+      <p><a href="https://github.com/miladnouri/Simple-blog-template" target="_blank">این قالب</a> با استفاده از ChatGPT ساخته شده و توسط <a href="https://miladnouri.ir" target="_blank">میلاد نوری</a> بهینه شده است.</p>
+    </footer>
+
+</body>
+
+</html>
