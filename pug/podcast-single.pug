@@ -1,0 +1,111 @@
+extends layout/_layout
+
+block variables
+    - var pageTitle = "صفحه پادکست تکی"
+
+block content
+    
+    // Breadcrumb navigation
+    div.breadcrumb
+        a(href="index.html") خانه
+        |  &gt; 
+        a(href="podcast-list.html") پادکست
+        |  &gt; اپیزودهای دسته‌بندی تکنولوژی
+
+    
+
+    //- Podcast Episode 1
+    article.card
+        h2
+            a(href="podcast-single.html") پادکست تکنولوژی | قسمت ۱: چالش‌ها و راهکارهای حفاظت از اطلاعات شخصی در دنیای دیجیتال
+        img(src="https://fakeimg.pl/800x200/5469a1/ffffff?text=Episode%201&font=lobster", alt="تصویر قسمت ۱")
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.  
+        p
+            |  در این قسمت به بحث در مورد تکنولوژی X و چگونگی استفاده از آن پرداخته می‌شود.
+        .podcast-buttons
+            a(href="#" target="_blank") گوش دادن در اسپاتیفای
+            a(href="#" target="_blank") گوش دادن در گوگل پادکست
+            a(href="#" target="_blank") گوش دادن در اپل پادکست
+            a(href="#" target="_blank") گوش دادن در کست‌باکس
+
+        //- Article Tags
+        .article-tags
+            h5 برچسب‌ها:
+        ul.tags-list
+            li
+                a(href="podcast-list.html") تکنولوژی
+            li
+                a(href="podcast-list.html") برنامه‌نویسی وب
+            li
+                a(href="podcast-list.html") HTML
+            li
+                a(href="podcast-list.html") CSS
+            li
+                a(href="podcast-list.html") JavaScript
+
+        //- Share Buttons
+        .share-buttons
+            h5 اشتراک‌گذاری:
+            ul.social-list
+                li
+                    a(href="https://t.me/share/url?url=YOUR_URL_HERE", class="social-icon telegram", target="_blank", title="اشتراک گذاری در تلگرام")
+                        i.fab.fa-telegram-plane
+                li
+                    a(href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE", class="social-icon twitter", target="_blank", title="اشتراک گذاری در توییتر")
+                        i.fab.fa-twitter
+                li
+                    a(href="https://api.whatsapp.com/send?text=YOUR_TEXT_HERE%20YOUR_URL_HERE", class="social-icon whatsapp", target="_blank", title="اشتراک گذاری در واتساپ")
+                        i.fab.fa-whatsapp
+                li
+                    a(href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE", class="social-icon facebook", target="_blank", title="اشتراک گذاری در فیسبوک")
+                        i.fab.fa-facebook-f
+                li
+                    a(href="https://www.linkedin.com/shareArticle?url=YOUR_URL_HERE&title=YOUR_TITLE_HERE", class="social-icon linkedin", target="_blank", title="اشتراک گذاری در لینکداین")
+                        i.fab.fa-linkedin-in
+
+                //- Add more share buttons for other social media platforms as needed
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+        //- Related Articles List
+        .related-articles-list
+            h4 سایر اپیزودها
+            ul
+                li
+                a(href="#") اپیزود قبل: هوش مصنوعی در زندگی روزمره: اثرات مثبت و چالش‌های اجتماعی
+                li
+                a(href="#") اپیزود بعد: بلاک‌چین: پشت پرده فناوری ارزهای دیجیتال و کاربردهای آینده
+                //- Add more related articles as needed
+
+    //- Comments Section
+    .comments-section
+        h4 نظرات (۳ نظر)
+        .card
+            h4 نام کاربری ۱
+            p مقاله بسیار خوبی بود. ممنون از اشتراک‌گذاری این مطالب مفید.
+            p.comment-info تاریخ: ۲۲ بهمن ۱۴۰۰ | ساعت: ۱۲:۰۰ ق.ظ
+
+        .card
+            h4 نام کاربری ۲
+            p متن مقاله جذاب و روان بود. اطلاعات مفیدی برایم ارائه کردید. ادامه دهید.
+            p.comment-info تاریخ: ۲۲ بهمن ۱۴۰۰ | ساعت: ۱:۳۰ ب.ظ
+
+        .card
+            h4 نام کاربری ۳
+            p واقعا لذت بردم! ممنون بابت این محتواهای ارزشمند.
+            p.comment-info تاریخ: ۲۳ بهمن ۱۴۰۰ | ساعت: ۱۰:۴۵ ق.ظ
+
+        //- Add New Comment
+        .card
+            h4 ثبت نظر
+            form
+                label(for="username") نام کاربری:
+                input(type="text", id="username", required)
+
+                label(for="comment") نظر شما:
+                textarea(id="comment", rows="4", required)
+
+                button(type="submit") ارسال نظر

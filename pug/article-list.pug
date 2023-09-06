@@ -1,0 +1,98 @@
+extends layout/_layout
+
+block variables
+    - var pageTitle = "نوشته‌های دسته‌بندی تکنولوژی"
+
+block content
+
+    // Breadcrumb navigation
+    div.breadcrumb
+        a(href="index.html") خانه
+        |  &gt; 
+        a(href="article-list.html") مقاله‌ها
+        |  &gt; 
+        | لیست نوشته‌های دسته‌بندی تکنولوژی
+
+
+    article.card
+        // Article 1
+        h2: a(href='article-single.html') چگونگی بهینه‌سازی وب‌سایت
+        img(src='https://fakeimg.pl/800x300/5469a1/ffffff?text=Sample+image&font=lobster', alt='تصویر مقاله')
+        p در این مقاله به بررسی روش‌های بهینه‌سازی وب‌سایت برای سرعت بیشتر، افزایش رتبه در نتایج جستجوی گوگل و بهبود تجربه کاربری پرداخته می‌شود.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 2
+        h2: a(href='article-single.html') راهکارهایی برای بهبود امنیت شبکه
+        p در این مقاله به بررسی راهکارهای مختلفی برای بهبود امنیت شبکه از جمله استفاده از فایروال، ابزارهای تشخیص تهدیدات، و کنترل دسترسی کاربران پرداخته می‌شود.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 3
+        h2: a(href='article-single.html') چگونگی کاهش هزینه‌های سرور با استفاده از تجزیه و تحلیل داده‌ها
+        p در این مقاله به بررسی نحوه استفاده از تجزیه و تحلیل داده‌ها برای کاهش هزینه‌های سرور و بهبود عملکرد سیستم پرداخته می‌شود.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 4
+        h2: a(href='article-single.html') تفاوت بین شبکه‌های اجتماعی محبوب در ایران
+        p در این مقاله به مقایسه شبکه‌های اجتماعی محبوب در ایران از جمله اینستاگرام، تلگرام، و توییتر پرداخته می‌شود و ویژگی‌ها، مزایا و معایب هر یک بررسی می‌شوند.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 5 - Audio
+        h2: a(href='article-single.html') آموزش برنامه‌نویسی Python
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.
+        p در این مقاله به آموزش برنامه‌نویسی با زبان Python و مباحث مختلف از جمله لیست‌ها، شرط‌ها و حلقه‌ها پرداخته می‌شود.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 6 - Video
+        h2: a(href='article-single.html') آشنایی با برنامه‌نویسی وب
+        video(controls)
+            source(src='assets/media/sample_video.mp4', type='video/mp4')
+            | Your browser does not support the video element.
+        p در این مقاله به معرفی مفاهیم برنامه‌نویسی وب و استفاده از زبان‌های HTML، CSS و JavaScript برای ساخت صفحات وب پرداخته می‌شود.
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    article.card
+        // Article 7 - Code Block
+        h2: a(href='article-single.html') آشنایی با توابع در Python
+        p در این مقاله به آشنایی با توابع در زبان برنامه‌نویسی Python پرداخته می‌شود. در ادامه، یک نمونه کد Python ارائه می‌شود:
+
+        pre.language-python
+            code
+                |   
+                |   def calculate_factorial(n):
+                |       if n == 0:
+                |             return 1
+                |        else:
+                |             return n * calculate_factorial(n-1)
+                |   
+                |   num = 5
+                |   print("Factorial of", num, "is", calculate_factorial(num))
+                |
+                |
+                |
+                    
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+
+    //- Pagination row
+    include layout/inc_pagination.pug

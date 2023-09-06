@@ -1,0 +1,121 @@
+block variables
+
+doctype html
+html(lang='fa', dir='rtl')
+  head
+    // Document metadata
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{pageTitle}
+    meta(name='description', content='توضیحات مربوط به صفحه')
+    meta(name='keywords', content='کلمات کلیدی مربوط به صفحه')
+    meta(name='author', content='نام نویسنده')
+    meta(name='robots', content='index, follow')
+    
+    // Open Graph meta tags
+    meta(property='og:title', content='عنوان صفحه')
+    meta(property='og:description', content='توضیحات مربوط به صفحه')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='آدرس صفحه')
+    meta(property='og:image', content='آدرس تصویر')
+
+    // Twitter Cards meta tags
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:title', content='عنوان صفحه')
+    meta(name='twitter:description', content='توضیحات مربوط به صفحه')
+    meta(name='twitter:image', content='آدرس تصویر')
+
+    // External stylesheet
+    link(rel='stylesheet', href='assets/style.css?v=1.3')
+  body
+    header
+      // Website header
+      h1 وبلاگ من
+      h2 زیرعنوان وبلاگ من
+      nav
+        // Navigation menu
+        ul
+          li: a(href='index.html') خانه
+          li: a(href='about.html') درباره من
+          li: a(href='contact.html') تماس با ما
+          li: a(href='podcast-list.html') پادکست
+          li: a(href='page.html') صفحه متنی
+          li: a(href='gallery.html') گالری
+          li.dropdown
+            a(href='#') منوی بازشو
+            ul.dropdown-content
+              li: a(href='article-list.html') لیست مقاله‌ها
+              li: a(href='page.html') قوانین و مقررات
+              li: a(href='faq.html') سوال‌های متداول
+
+    .container
+      // Main content section
+      main
+        block content
+
+      // Sidebar
+      aside.sidebar
+
+        // Social media boxes
+        a.social-box.twitter(href='https://twitter.com/', target='_blank') توییتر من
+        a.social-box.telegram(href='https://telegram.org/', target='_blank') کانال تلگرام
+        a.social-box.youtube(href='https://www.youtube.com/', target='_blank') کانال یوتوب
+        a.social-box.instagram(href='https://www.instagram.com/', target='_blank') اینستاگرام من
+
+        div.card
+            form(method='get', action='#')
+                input(type='text', placeholder='جستجوی نوشته‌ها...')
+                button(type='submit') >>
+
+        div.card
+            h5.sidebar-card-title دسته‌بندی‌ها
+            ul
+                li: a(href='article-list.html') تکنولوژی
+                li: a(href='article-list.html') گجت‌ها
+                li: a(href='article-list.html') نرم‌افزار
+                li: a(href='article-list.html') هوش مصنوعی
+                li: a(href='article-list.html') اینترنت اشیاء (IoT)
+                li: a(href='article-list.html') امنیت اطلاعات
+                li: a(href='article-list.html') بلاک‌چین
+                // Add more categories as needed
+
+        div.card
+            h5.sidebar-card-title سال‌های قبل در چنین روزی
+            ul
+                li: a(href='article-single.html') تکنولوژی‌های نوظهور در دنیای اینترنت اشیاء
+                li: a(href='article-single.html') آخرین روند‌ها در توسعه‌ی نرم‌افزارهای مبتنی بر هوش مصنوعی
+                li: a(href='article-single.html') چالش‌ها و راهکارهای امنیت سایبری در دنیای ارتباطات هوشمند
+                li: a(href='article-single.html') جهش‌های بزرگ در تکنولوژی‌های رایانه‌ای و شبکه‌های پرسرعت
+                li: a(href='article-single.html') کاربردهای جدید فناوری بلاکچین در صنعت‌های مختلف
+                // Add more articles as needed
+
+        div.card
+            h5.sidebar-card-title آخرین گفتگوهای من
+            ul
+                li: a(href='#') گفت‌و‌گو با مهندس نرم‌افزار درباره آینده‌ی هوش مصنوعی
+                li: a(href='#') مصاحبه با مخترع اینترنت اشیاء در مورد ارتباطات هوشمند
+                li: a(href='#') گفت‌و‌گو با دیزاینر UI/UX درباره آخرین ترند‌های طراحی وب
+                li: a(href='#') مصاحبه با دانشمند داده‌ها در مورد تحلیل‌های پیشرفته
+                // Add more conversations as needed
+
+        // Tags Section
+        div.card
+            h5.sidebar-card-title برچسب‌ها
+            ul.tags-list
+                li: a(href='article-list.html') تکنولوژی
+                li: a(href='article-list.html') برنامه‌نویسی
+                li: a(href='article-list.html') شبکه‌ها
+                li: a(href='article-list.html') امنیت
+                li: a(href='article-list.html') هوش مصنوعی
+                li: a(href='article-list.html') انترنت اشیاء
+                li: a(href='article-list.html') اندروید
+                li: a(href='article-list.html') iOS
+                li: a(href='article-list.html') تجارت الکترونیک
+                li: a(href='article-list.html') بلاکچین
+
+    footer
+      // Website footer
+      p تمامی حقوق محفوظ است. © ۱۴۰۲
+      p: a(href='https://github.com/miladnouri/simple-blog-template', target='_blank') این قالب با استفاده از ChatGPT ساخته شده و توسط میلاد نوری بهینه شده است.
+
+  script(type='text/javascript', src='assets/prism.js')

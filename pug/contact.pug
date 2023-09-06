@@ -1,0 +1,34 @@
+extends layout/_layout
+
+block variables
+    - var pageTitle = "تماس با من"
+
+block content
+
+    section.card
+        h2 تماس با من
+        p
+            | برای ارتباط با من، لطفاً فرم زیر را پر کنید یا از اطلاعات تماس پایین استفاده کنید.
+        
+        .contact-info
+            p
+                strong آدرس ایمیل: 
+                span.email info@example.com
+            p
+                strong تلفن: 
+                | 123-456-7890
+            p
+                strong آدرس: 
+                | تهران، خیابان مثال، کوچه تست، پلاک 123
+
+        form.contact-form(action="submit_contact_form.php" method="post")
+            label(for="name") نام:
+            input#name(type="text" name="name" required)
+
+            label(for="email") ایمیل:
+            input#email(type="email" name="email" required)
+
+            label(for="message") پیام:
+            textarea#message(name="message" rows="4" required)
+
+            button(type="submit") ارسال پیام
