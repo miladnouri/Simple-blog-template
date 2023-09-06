@@ -1,0 +1,170 @@
+extends layout/_layout
+
+block variables
+    - var pageTitle = "نوشته تک"
+
+block content
+
+    // Breadcrumb navigation
+    div.breadcrumb
+        a(href="index.html") خانه
+        |  &gt; 
+        a(href="article-list.html") مقاله‌ها
+        |  &gt; 
+        | لیست نوشته‌های دسته‌بندی تکنولوژی
+    
+    article.card
+        // Article Content
+        h1
+            a(href="#") آموزش برنامه‌نویسی وب
+        img(src="https://fakeimg.pl/800x300/5469a1/ffffff?text=Sample+image&font=lobster", alt="تصویر مقاله")
+        p
+            | در این مقاله به آموزش برنامه‌نویسی وب با استفاده از زبان‌های HTML، CSS و JavaScript پرداخته می‌شود. این آموزش شامل مفاهیم مختلفی از جمله تعریف صفحات وب با HTML، استایل دهی به صفحات با CSS و اضافه کردن افکت‌ها و تعاملات با استفاده از JavaScript می‌باشد.
+
+        h1 نمونه متن قرار گرفته در تگ h1
+        h2 نمونه متن قرار گرفته در تگ h2
+        h3 نمونه متن قرار گرفته در تگ h3
+        h4 نمونه متن قرار گرفته در تگ h4
+        h5 نمونه متن قرار گرفته در تگ h5
+
+        h3 تصویر نمونه
+        img(src="https://fakeimg.pl/800x100/eb4034/ffffff?text=Java+Script", alt="تصویر آموزش")
+
+        h3 آموزش صوتی
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.
+        p
+            | شما می‌توانید این آموزش صوتی را برای گوش دادن به مباحث آموزش برنامه‌نویسی وب با استفاده از زبان‌های مختلف مانند HTML، CSS و JavaScript استفاده کنید.
+
+        h3 آموزش ویدئویی
+        video(controls)
+            source(src="assets/media/sample_video.mp4", type="video/mp4")
+            | Your browser does not support the video element.
+        p
+            | شما می‌توانید این آموزش ویدئویی را ببینید تا بهتر و قدم به قدم نحوه کدنویسی و اجرای برنامه‌های وب را یاد بگیرید.
+
+        h3 کد نمونه - HTML و CSS
+        pre.language-markup
+            code
+                |   &lt;!DOCTYPE html&gt;
+                |   &lt;html&gt;
+                |   &lt;head&gt;
+                |       &lt;title&gt;صفحه وب نمونه&lt;/title&gt;
+                |       &lt;link rel="stylesheet" href="style.css"&gt;
+                |   &lt;/head&gt;
+                |   &lt;body&gt;
+                |       &lt;h1&gt;این یک صفحه وب نمونه است&lt;/h1&gt;
+                |       &lt;p&gt;این یک متن نمونه است که به عنوان توضیح در صفحه قرار می‌گیرد.&lt;/p&gt;
+                |   &lt;/body&gt;
+                |   &lt;/html&gt;
+        p
+            | این کد نمونه، یک صفحه وب ساده با استفاده از زبان‌های HTML و CSS را نشان می‌دهد. با اجرای این کد در مرورگر، شما یک صفحه وب ساده با یک عنوان و یک پاراگراف متنی خواهید داشت.
+
+        h3 کد نمونه - JavaScript
+        pre.language-js
+            code
+                |   // JavaScript Sample Code
+                |   function greet(name) {
+                |       return "Hello, " + name + "!";
+                |   }
+                |
+                |   var user = "John";
+                |   var message = greet(user);
+                |   console.log(message);
+        p
+            | این کد نمونه نشان می‌دهد چگونه از زبان برنامه‌نویسی JavaScript برای تعریف تابع ساده‌ای استفاده کنید و از آن در کنسول مرورگر خروجی بگیرید.
+
+        // Article Tags
+        .article-tags
+            h5 برچسب‌ها:
+            ul.tags-list
+                li
+                    a(href="#") تکنولوژی
+                li
+                    a(href="#") برنامه‌نویسی وب
+                li
+                    a(href="#") HTML
+                li
+                    a(href="#") CSS
+                li
+                    a(href="#") JavaScript
+
+        // Share Buttons
+        .share-buttons
+            h5 اشتراک‌گذاری:
+            ul.social-list
+                li
+                    a(href="https://t.me/share/url?url=YOUR_URL_HERE", class="social-icon telegram", target="_blank", title="اشتراک گذاری در تلگرام")
+                        i.fab.fa-telegram-plane
+                li
+                    a(href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE", class="social-icon twitter", target="_blank", title="اشتراک گذاری در توییتر")
+                        i.fab.fa-twitter
+                li
+                    a(href="https://api.whatsapp.com/send?text=YOUR_TEXT_HERE%20YOUR_URL_HERE", class="social-icon whatsapp", target="_blank", title="اشتراک گذاری در واتساپ")
+                        i.fab.fa-whatsapp
+                li
+                    a(href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE", class="social-icon facebook", target="_blank", title="اشتراک گذاری در فیسبوک")
+                        i.fab.fa-facebook-f
+                li
+                    a(href="https://www.linkedin.com/shareArticle?url=YOUR_URL_HERE&title=YOUR_TITLE_HERE", class="social-icon linkedin", target="_blank", title="اشتراک گذاری در لینکداین")
+                        i.fab.fa-linkedin-in
+                // Add more share buttons for other social media platforms as needed
+
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+        // Related Articles List
+        .related-articles-list
+            h4 نوشته‌های مشابه (حالت ساده)
+            ul
+                li
+                a(href="#") آموزش پیشرفته CSS
+                li
+                a(href="#") آشنایی با جدیدترین ویژگی‌های HTML5
+                // Add more related articles as needed
+
+    // Related Articles
+    section.related-articles
+        h3 نوشته‌های مشابه (حالت کارت)
+        article.related-article.card
+            h3
+                a(href="#") آموزش پیشرفته CSS
+            p
+                | در این مقاله به تکنیک‌ها و ترفندهای پیشرفته در CSS پرداخته می‌شود...
+        article.related-article.card
+            h3
+                a(href="#") آشنایی با جدیدترین ویژگی‌های HTML5
+            p
+                | در این مقاله به ویژگی‌های جدید و مهم HTML5 می‌پردازیم...
+        // Add more related articles as needed
+
+    // Comments Section
+    .comments-section
+        h4 نظرات (۳ نظر)
+        .card
+            h4 نام کاربری ۱
+            p
+                | مقاله بسیار خوبی بود. ممنون از اشتراک‌گذاری این مطالب مفید.
+            p.comment-info تاریخ: ۲۲ بهمن ۱۴۰۰ | ساعت: ۱۲:۰۰ ق.ظ
+        .card
+            h4 نام کاربری ۲
+            p
+                | متن مقاله جذاب و روان بود. اطلاعات مفیدی برایم ارائه کردید. ادامه دهید.
+            p.comment-info تاریخ: ۲۲ بهمن ۱۴۰۰ | ساعت: ۱:۳۰ ب.ظ
+        .card
+            h4 نام کاربری ۳
+            p
+                | واقعا لذت بردم! ممنون بابت این محتواهای ارزشمند.
+            p.comment-info تاریخ: ۲۳ بهمن ۱۴۰۰ | ساعت: ۱۰:۴۵ ق.ظ
+
+        // Add New Comment
+        .card
+            h4 ثبت نظر
+            form
+                label(for="username") نام کاربری:
+                input(type="text", id="username", required)
+                label(for="comment") نظر شما:
+                textarea(id="comment", rows="4", required)
+                button(type="submit") ارسال نظر

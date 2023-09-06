@@ -1,0 +1,21 @@
+block variables
+
+doctype html
+html(lang="fa" dir="rtl")
+  head
+    // Document metadata
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    meta(name='description', content=title)
+    
+    // External stylesheet
+    link(rel="stylesheet", href="assets/style.css")
+  body
+    // Error Page Content
+    main.error
+      block content
+
+      h1 #{title}
+      p #{subTitle}
+      a(href="index.html") بازگشت به صفحه اصلی

@@ -1,0 +1,98 @@
+extends layout/_layout
+
+block variables
+    - var pageTitle = "صفحه پادکست"
+
+block content
+    
+    // Breadcrumb navigation
+    div.breadcrumb
+        a(href="index.html") خانه
+        |  &gt; 
+        a(href="podcast-list.html") پادکست
+        |  &gt; اپیزودهای دسته‌بندی تکنولوژی
+
+    section.card
+        h2 پادکست تازه‌های تکنولوژی
+        .about-text
+            p
+                img.about-photo(src="https://via.placeholder.com/200", alt="تصویر نمایه")
+                |  به پادکست "تازه‌های تکنولوژی" خوش آمدید! در این پادکست، به بررسی و بحث درباره آخرین اخبار و تحولات جهان فناوری می‌پردازیم. از تازه‌ترین دستاوردهای علمی تا لحظه‌ی عرضه‌ی دستگاه‌ها و خدمات جدید، همه چیز را درباره دنیای فناوری در این پادکست خواهید شنید. با ما همراه شوید و به دنیایی پر از نوآوری و تحولات عجیب و جذاب سفر کنید.
+            p
+                |  با گسترش روزافزون فناوری در تمامی جوانب زندگی، پادکست "تازه‌های تکنولوژی" تصمیم گرفته است تا به شما تجربه‌ای جامع و البته سرگرم‌کننده از اخبار تکنولوژی ارائه دهد. از مبتکران ویژه‌ای که با ابداعاتشان دنیای فناوری را شکل می‌دهند تا تحلیل‌های عمیق در مورد اثرات اجتماعی و اقتصادی تکنولوژی، ما همه جنبه‌های این دنیای پویا را روایت می‌کنیم. هدف ما از این پادکست، به اشتراک گذاشتن اطلاعاتی است که به شما کمک می‌کند تا درک بهتری از چگونگی تأثیر تکنولوژی بر جامعه و زندگی روزمره پیدا کنید.
+
+            .podcast-buttons
+                a.castbox(href="#" target="_blank")
+                    i.fa-solid.fa-circle-play
+                    |  اشتراک در کست‌باکس
+                a.google-podcast(href="#" target="_blank")
+                    i.fab.fa-google
+                    |  اشتراک در گوگل پادکست
+                a.apple-podcast(href="#" target="_blank")
+                    i.fab.fa-apple
+                    |  اشتراک در اپل پادکست
+                a.spotify(href="#" target="_blank")
+                    i.fab.fa-spotify
+                    |  اشتراک در اسپاتیفای
+
+    //- Podcast Episode 1
+    article.card
+        h2
+            a(href="podcast-single.html") قسمت ۱: چالش‌ها و راهکارهای حفاظت از اطلاعات شخصی در دنیای دیجیتال
+        img(src="https://fakeimg.pl/800x200/5469a1/ffffff?text=Episode%201&font=lobster", alt="تصویر قسمت ۱")
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.    
+        p
+            |  در این قسمت به بحث در مورد تکنولوژی X و چگونگی استفاده از آن پرداخته می‌شود.
+        .podcast-buttons
+            a(href="#" target="_blank") گوش دادن در اسپاتیفای
+            a(href="#" target="_blank") گوش دادن در گوگل پادکست
+            a(href="#" target="_blank") گوش دادن در اپل پادکست
+            a(href="#" target="_blank") گوش دادن در کست‌باکس
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    //- Podcast Episode 2
+    article.card
+        h2
+            a(href="podcast-single.html") قسمت ۲: عنوان قسمت
+        img(src="https://fakeimg.pl/800x200/5469a1/ffffff?text=Episode%202&font=lobster", alt="تصویر قسمت ۲")
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.  
+        p
+            |  در این قسمت به بحث در مورد تکنولوژی Y و نقش آن در جامعه پرداخته می‌شود.
+        .podcast-buttons
+            a(href="#" target="_blank") گوش دادن در اسپاتیفای
+            a(href="#" target="_blank") گوش دادن در گوگل پادکست
+            a(href="#" target="_blank") گوش دادن در اپل پادکست
+            a(href="#" target="_blank") گوش دادن در کست‌باکس
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    //- Podcast Episode 3
+    article.card
+        h2
+            a(href="podcast-single.html") قسمت ۳: عنوان قسمت
+        img(src="https://fakeimg.pl/800x200/5469a1/ffffff?text=Episode%203&font=lobster", alt="تصویر قسمت ۳")
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.  
+        p
+            |  در این قسمت به بحث در مورد تکنولوژی Z و چالش‌های پیش روی آن پرداخته می‌شود.
+        .podcast-buttons
+            a(href="#" target="_blank") گوش دادن در اسپاتیفای
+            a(href="#" target="_blank") گوش دادن در گوگل پادکست
+            a(href="#" target="_blank") گوش دادن در اپل پادکست
+            a(href="#" target="_blank") گوش دادن در کست‌باکس
+
+        //- Date/Time & Comments Count Info
+        include layout/inc_date_time_info.pug
+
+    //- Repeat for more episodes
+
+    //- Pagination row
+    include layout/inc_pagination.pug

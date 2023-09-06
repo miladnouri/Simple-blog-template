@@ -3,9 +3,17 @@
 
 This is a simple blog template designed for easy customization and deployment. It was created by [ChatGPT](https://openai.com/) and modified by [Milad Nouri](https://github.com/miladnouri).
 
+
 ## Usage
 
-To use this template, simply fork this repository and customize the files according to your needs. You can add new blog posts by creating markdown files in the `/_posts` directory.
+This template offers two versions:
+
+- **HTML Version**: The HTML version is located in the `html` folder. It's suitable for users who prefer working with standard HTML.
+
+- **Pug Version**: The Pug (formerly Jade) version is available in the `pug` folder. Pug is a concise and expressive templating language for HTML. Choose this version if you prefer using Pug for your templates.
+
+pug -w ./pug -o ./html -P 
+
 
 ## Features
 
@@ -16,16 +24,17 @@ To use this template, simply fork this repository and customize the files accord
 
 ## Pages Included
 
-- **Blog Page**: Display your latest blog posts and engage with your readers.
-- **Contact Page**: Allow visitors to get in touch with you through a contact form.
-- **FAQ Page**: Answer frequently asked questions with expandable FAQ items.
-- **About Page**: Share information about your blog and invite donations to support the project.
-- **Static Page**: Create additional static pages to showcase various content.
-- **Gallery Page**: Display a collection of images to captivate your audience.
+- **Blog Page**: Display your latest blog posts, allowing readers to engage with your content.
+- **Podcast Page**: Share your podcast episodes and provide users with an easy way to listen to them.
+- **Contact Page**: Allow visitors to get in touch with you through a convenient contact form.
+- **FAQ Page**: Answer frequently asked questions with expandable FAQ items to improve user experience.
+- **About Page**: Share information about yourself or your blog and invite donations to support your project.
+- **Static Page**: Create additional static pages to showcase various content, such as a portfolio or testimonials.
+- **Gallery Page**: Display a collection of images to captivate your audience visually.
 
 ## Used By
 
-- https://milad.nu/blog
+- https://milad.nu/
 - [Add your website here]
 
 ## How to Contribute
@@ -41,9 +50,8 @@ Contributions are welcome and encouraged! If you have any suggestions, bug fixes
 Please ensure that your contributions align with the purpose of this template and follow best practices for coding and documentation.
 
 ## Credits
-
-- [ChatGPT](https://openai.com/) - original template
-- [Milad Nouri](https://github.com/miladnouri) - modifications and updates to the template
+- [ChatGPT](https://openai.com/): Original template creator
+- [Milad Nouri](https://github.com/miladnouri): Modifications and updates to the template
 
 This README.md file was created by ChatGPT.
 
