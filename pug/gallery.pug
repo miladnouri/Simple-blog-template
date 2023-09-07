@@ -5,12 +5,18 @@ block variables
 
 block content
 
-    section.card.gallery
-        //- Gallery Photos
-        - for (var i = 1; i <= 6; i++)
-            div.photo
-                a(href="#" target="_blank")
-                    img(src=`https://fakeimg.pl/800x600/${i % 2 === 0 ? 'eb4034' : '5469a1'}/ffffff?text=Photo+${i}`, alt=`تصویر ${i}`)
-                    div.caption
-                        h3= `عنوان تصویر ${i}`
-                        p= `۲۲ مهر ۱۴۰۲`
+
+    section.card
+       
+        h2 گالری (مثلا لیست مصاحبه‌ها)
+
+        .gallery
+
+            //- Gallery Photos
+            - for (var i = 1; i <= 6; i++)
+                div.photo
+                    a(href="#" target="_blank")
+                        img(src=`https://fakeimg.pl/800x600/${i % 2 === 0 ? 'eb4034' : '5469a1'}/ffffff?text=Photo+${i}`, alt=`تصویر ${i}`)
+                        div.caption
+                            h3= `عنوان تصویر ${i}`
+                            p= `۲۲ مهر ۱۴۰۲`
