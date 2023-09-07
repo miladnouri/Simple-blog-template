@@ -24,9 +24,12 @@ block content
         include layout/inc_date_time_info.pug
 
     article.card
-        // Article 2
-        h2: a(href='article-single.html') راهکارهایی برای بهبود امنیت شبکه
-        p در این مقاله به بررسی راهکارهای مختلفی برای بهبود امنیت شبکه از جمله استفاده از فایروال، ابزارهای تشخیص تهدیدات، و کنترل دسترسی کاربران پرداخته می‌شود.
+        // Article 2 - Audio
+        h2: a(href='article-single.html') آموزش برنامه‌نویسی Python
+        audio(controls)
+            source(src='assets/media/beep.mp3', type='audio/mpeg')
+            | Your browser does not support the audio element.
+        p در این مقاله به آموزش برنامه‌نویسی با زبان Python و مباحث مختلف از جمله لیست‌ها، شرط‌ها و حلقه‌ها پرداخته می‌شود.
 
         //- Date/Time & Comments Count Info
         include layout/inc_date_time_info.pug
@@ -48,16 +51,14 @@ block content
         include layout/inc_date_time_info.pug
 
     article.card
-        // Article 5 - Audio
-        h2: a(href='article-single.html') آموزش برنامه‌نویسی Python
-        audio(controls)
-            source(src='assets/media/beep.mp3', type='audio/mpeg')
-            | Your browser does not support the audio element.
-        p در این مقاله به آموزش برنامه‌نویسی با زبان Python و مباحث مختلف از جمله لیست‌ها، شرط‌ها و حلقه‌ها پرداخته می‌شود.
+        // Article 2
+        h2: a(href='article-single.html') راهکارهایی برای بهبود امنیت شبکه
+        p در این مقاله به بررسی راهکارهای مختلفی برای بهبود امنیت شبکه از جمله استفاده از فایروال، ابزارهای تشخیص تهدیدات، و کنترل دسترسی کاربران پرداخته می‌شود.
 
         //- Date/Time & Comments Count Info
         include layout/inc_date_time_info.pug
 
+        
     article.card
         // Article 6 - Video
         h2: a(href='article-single.html') آشنایی با برنامه‌نویسی وب

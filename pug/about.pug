@@ -4,8 +4,16 @@ block variables
     - var pageTitle = "درباره من"
 
 block content
+
+
+    // Breadcrumb navigation
+    div.breadcrumb
+        a(href="index.html") خانه
+        |  &gt; 
+        | درباره من
+
     section.card
-        h2 درباره ما
+        h2 درباره من
         .about-text
             p
                 img.about-photo(src='https://via.placeholder.com/200', alt='تصویر نمایه')
@@ -32,14 +40,14 @@ block content
         h2 حمایت مالی (نمونه ۱)
         p
             | اگر از محتوای وبلاگ ما لذت می‌برید و می‌خواهید ما را حمایت کنید، می‌توانید با کلیک بر روی دکمه زیر اقدام به اهدای مبلغ دلخواه خود کنید. هر یک از حمایت‌های شما، به ما در ادامه تولید محتوا کمک می‌کند.
-        button.donation-button لینک حمایت مالی
-
-    section.card.donation
-        h2 حمایت مالی (نمونه ۲)
-        p
-            | اگر از محتوای وبلاگ ما لذت می‌برید و می‌خواهید ما را حمایت کنید، می‌توانید با کلیک بر روی دکمه زیر اقدام به اهدای مبلغ دلخواه خود کنید. هر یک از حمایت‌های شما، به ما در ادامه تولید محتوا کمک می‌کند.
         .donation-buttons
             a.donation-button.paypal(href='#') حمایت با PayPal
             a.donation-button.bitcoin(href='#') حمایت با Bitcoin
             a.donation-button.ethereum(href='#') حمایت با Ethereum
             a.donation-button.dogecoin(href='#') حمایت با Dogecoin
+
+    section.card.donation
+        h2 حمایت مالی (نمونه ۲)
+        p
+            | اگر از محتوای وبلاگ ما لذت می‌برید و می‌خواهید ما را حمایت کنید، می‌توانید با کلیک بر روی دکمه زیر اقدام به اهدای مبلغ دلخواه خود کنید. هر یک از حمایت‌های شما، به ما در ادامه تولید محتوا کمک می‌کند.
+        button.donation-button لینک حمایت مالی            
