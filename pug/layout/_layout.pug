@@ -57,10 +57,28 @@ html(lang='fa', dir='rtl')
       aside.sidebar
 
         // Social media boxes
-        a.social-box.twitter(href='https://twitter.com/', target='_blank') توییتر من
-        a.social-box.telegram(href='https://telegram.org/', target='_blank') کانال تلگرام
-        a.social-box.youtube(href='https://www.youtube.com/', target='_blank') کانال یوتوب
-        a.social-box.instagram(href='https://www.instagram.com/', target='_blank') اینستاگرام من
+
+
+        div.social-icons
+
+          a.social-box-small.twitter(href='https://twitter.com/', target='_blank', title='توییتر من')
+            i.fab.fa-twitter
+          a.social-box-small.telegram(href='https://telegram.org/', target='_blank', title='کانال تلگرام')
+            i.fab.fa-telegram-plane
+          a.social-box-small.youtube(href='https://www.youtube.com/', target='_blank', title='کانال یوتوب')
+            i.fab.fa-youtube
+          a.social-box-small.instagram(href='https://www.instagram.com/', target='_blank', title='اینستاگرام من')
+            i.fab.fa-instagram
+          a.social-box-small.mastadon(href='https://mastodon.social/', target='_blank', title='ماستادون من')
+            i.fab.fa-mastodon
+          a.social-box-small.github(href='https://github.com/', target='_blank', title='گیت‌هاب من')
+            i.fab.fa-github  
+
+          a.social-box.twitter(href='https://twitter.com/', target='_blank', title='توییتر من') توییتر من
+          a.social-box.telegram(href='https://telegram.org/', target='_blank', title='کانال تلگرام') کانال تلگرام
+          a.social-box.youtube(href='https://www.youtube.com/', target='_blank', title='کانال یوتوب') کانال یوتوب
+          a.social-box.instagram(href='https://www.instagram.com/', target='_blank', title='اینستاگرام من') اینستاگرام من
+          a.social-box.mastadon(href='https://mastodon.social/', target='_blank', title='ماستادون من') ماستادون من
 
         div.card
             form(method='get', action='#')
