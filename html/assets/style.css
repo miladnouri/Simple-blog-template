@@ -736,6 +736,27 @@ button:hover {
   color: #fff;
 }
 
+/* Gray Badge */
+.gray-badge {
+  float: left;
+  background-color: #b6b6b6;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Red Badge */
+.red-badge {
+  float: left;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+
 
 /* Medium screens */
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -801,6 +822,9 @@ button:hover {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }
+
+
+
 
 }
 
