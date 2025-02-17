@@ -28,6 +28,8 @@ This template offers two versions:
 - **Contact Page**: Allow visitors to get in touch with you through a convenient contact form.
 - **FAQ Page**: Answer frequently asked questions with expandable FAQ items to improve user experience.
 - **About Page**: Share information about yourself or your blog and invite donations to support your project.
+- **Timeline Page**: Showcase the author's journey and milestones in a visually appealing timeline format.
+- **Donation Page**: Allow users to support the project financially through various payment options.
 - **Static Page**: Create additional static pages to showcase various content, such as a portfolio or testimonials.
 - **Gallery Page**: Display a collection of images to captivate your audience visually.
 
