@@ -73,7 +73,7 @@ Please ensure that your contributions align with the purpose of this template an
 
 If you find my projects and content valuable and would like to support my efforts, consider making a donation.  
 
-👉 **[Donate Now](https://milad.nu/donate)** ❤️
+👉 **[Donate Now](https://milad.nu/page/donate)** ❤️
 
 ---
 
