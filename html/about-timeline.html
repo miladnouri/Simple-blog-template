@@ -26,8 +26,8 @@
   <body>
     <header>
       <!-- Website header-->
-      <h1>وبلاگ من</h1>
-      <h2>زیرعنوان وبلاگ من</h2>
+      <h1>[وبلاگ من...]</h1>
+      <h2>زیرعنوان وبلاگ من...</h2>
       <nav>
         <!-- Navigation menu-->
         <ul>
@@ -57,7 +57,7 @@
         <section class="card">
           <h2>درباره من</h2>
           <div class="about-text">
-            <p><img class="about-photo" src="https://via.placeholder.com/200" alt="تصویر نمایه">این یک وبلاگ است که به مقالات و مطالب مرتبط با برنامه‌نویسی و تکنولوژی می‌پردازد. ما سعی داریم
+            <p><img class="about-photo" src="https://picsum.photos/200/200?random=1" alt="تصویر نمایه">این یک وبلاگ است که به مقالات و مطالب مرتبط با برنامه‌نویسی و تکنولوژی می‌پردازد. ما سعی داریم
               اطلاعات مفید و کاربردی را در اختیار کاربران علاقه‌مند به این حوزه قرار دهیم. امیدواریم که
               از مطالب ما لذت ببرید و مفید بدانید. این وبلاگ با هدف ارتقاء دانش و آموزش جامعه برنامه‌نویسی و
               مهندسان نرم‌افزار تأسیس شده است. در اینجا سعی می‌کنیم به صورت مرتب و منظم، مطالبی را منتشر
@@ -79,14 +79,15 @@
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-content">
-                <h3>۱۴۰۲ - شروع پایان‌نامه</h3>
-                <p>آغاز نگارش پایان‌نامه در حوزه [موضوع تحقیقاتی] و تکمیل پروژه‌های مرتبط.</p>
+                <h3>۱۴۰۲ - شروع پایان‌نامه <span class="timeline-badge">درحال انجام</span></h3>
+                <p>آغاز نگارش پایان‌نامه در حوزه [موضوع تحقیقاتی] و تکمیل پروژه‌های مرتبط.<br><a href="#details">مشاهده در سایت دانشگاه</a></p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
+            <div class="timeline-item with-thumbnail">
+              <div class="timeline-content"><img class="timeline-thumbnail" src="https://picsum.photos/60/60?random=1" alt="نمونه عکس">
                 <h3>۱۴۰۱ - تخصص در توسعه وب</h3>
-                <p>مطالعه پیشرفته JavaScript و فریمورک‌های مدرن مانند ReactJS برای توسعه اپلیکیشن‌های تحت وب.</p>
+                <p>مطالعه پیشرفته JavaScript و فریمورک‌های مدرن مانند ReactJS برای توسعه اپلیکیشن‌های تحت وب.<br><a href="#details">اطلاعات بیشتر</a></p>
+                <div class="timeline-buttons"><a class="timeline-button" href="#repo" target="_blank"><i class="fab fa-github"></i>مخزن کد</a><a class="timeline-button" href="#demo" target="_blank"><i class="fas fa-external-link-alt"></i>دمو</a></div>
               </div>
             </div>
             <div class="timeline-item">
@@ -112,10 +113,29 @@
         <section class="timeline-section">
           <h2>تاریخچه پروژه‌های من</h2>
           <div class="timeline">
+            <div class="timeline-item with-thumbnail">
+              <div class="timeline-content"><img class="timeline-thumbnail" src="https://picsum.photos/60/60?random=1" alt="نمونه عکس">
+                <h3>۱۴۰۲ - پروژه مدیریت مالی <span class="timeline-badge">درحال توسعه</span></h3>
+                <p>توسعه یک داشبورد مدیریت مالی با قابلیت تحلیل هزینه‌ها. <a href="#details">مشاهده جزئیات</a></p>
+                <div class="timeline-buttons"><a class="timeline-button" href="#repo" target="_blank"><i class="fab fa-github"></i>مخزن کد</a><a class="timeline-button" href="#demo" target="_blank"><i class="fas fa-external-link-alt"></i>دمو</a></div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3><i class="fas fa-certificate"></i> ۱۴۰۱ - گواهینامه تخصصی</h3>
+                <p>دریافت گواهینامه AWS Solutions Architect <i class="fas fa-external-link-alt"></i></p>
+              </div>
+            </div>
             <div class="timeline-item">
               <div class="timeline-content">
                 <h3>۱۳۹۷ - اولین اسکریپت خودکارسازی</h3>
                 <p>توسعه یک اسکریپت ساده با  <a href="https://www.python.org/" target="_blank">Python  </a>برای پردازش داده‌های متنی و یادگیری اصول برنامه‌نویسی.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>۱۳۹۷ - نمونه توضیح کوتاه</h3>
+                <p>توضیح کوتاه            </p>
               </div>
             </div>
             <div class="timeline-item">
@@ -154,7 +174,7 @@
       <!-- Sidebar-->
       <aside class="sidebar">
         <!-- Social media boxes-->
-        <div class="social-icons"><a class="social-box-small twitter" href="https://twitter.com/" target="_blank" title="توییتر من"><i class="fab fa-twitter"></i></a><a class="social-box-small telegram" href="https://telegram.org/" target="_blank" title="کانال تلگرام"><i class="fab fa-telegram-plane"></i></a><a class="social-box-small youtube" href="https://www.youtube.com/" target="_blank" title="کانال یوتوب"><i class="fab fa-youtube"></i></a><a class="social-box-small instagram" href="https://www.instagram.com/" target="_blank" title="اینستاگرام من"><i class="fab fa-instagram"></i></a><a class="social-box-small mastadon" href="https://mastodon.social/" target="_blank" title="ماستادون من"><i class="fab fa-mastodon"></i></a><a class="social-box-small github" href="https://github.com/" target="_blank" title="گیت‌هاب من"><i class="fab fa-github"> </i></a><a class="social-box twitter" href="https://twitter.com/" target="_blank" title="توییتر من">توییتر من</a><a class="social-box telegram" href="https://telegram.org/" target="_blank" title="کانال تلگرام">کانال تلگرام</a><a class="social-box youtube" href="https://www.youtube.com/" target="_blank" title="کانال یوتوب">کانال یوتوب</a><a class="social-box instagram" href="https://www.instagram.com/" target="_blank" title="اینستاگرام من">اینستاگرام من</a><a class="social-box mastadon" href="https://mastodon.social/" target="_blank" title="ماستادون من">ماستادون من</a></div>
+        <div class="social-icons"><a class="social-box-small twitter" href="https://twitter.com/" target="_blank" title="توییتر من"><i class="fab fa-twitter"></i></a><a class="social-box-small telegram" href="https://telegram.org/" target="_blank" title="کانال تلگرام"><i class="fab fa-telegram-plane"></i></a><a class="social-box-small youtube" href="https://www.youtube.com/" target="_blank" title="کانال یوتوب"><i class="fab fa-youtube"></i></a><a class="social-box-small instagram" href="https://www.instagram.com/" target="_blank" title="اینستاگرام من"><i class="fab fa-instagram"></i></a><a class="social-box-small mastadon" href="https://mastodon.social/" target="_blank" title="ماستادون من"><i class="fab fa-mastodon"></i></a><a class="social-box-small github" href="https://github.com/" target="_blank" title="گیت‌هاب من"><i class="fab fa-github"> </i></a><a class="social-box twitter" href="https://twitter.com/" target="_blank" title="توییتر من">توییتر من</a><a class="social-box telegram" href="https://telegram.org/" target="_blank" title="کانال تلگرام"><i class="fab fa-telegram"></i>کانال تلگرام</a><a class="social-box youtube" href="https://www.youtube.com/" target="_blank" title="کانال یوتوب"><i class="fab fa-youtube"></i>کانال یوتوب</a><a class="social-box instagram" href="https://www.instagram.com/" target="_blank" title="اینستاگرام من">اینستاگرام من</a><a class="social-box mastadon" href="https://mastodon.social/" target="_blank" title="ماستادون من">ماستادون من</a></div>
         <div class="card">
           <form method="get" action="#">
             <input type="text" placeholder="جستجوی نوشته‌ها...">
@@ -215,7 +235,7 @@
     </div>
     <footer>
       <!-- Website footer-->
-      <p>تمامی حقوق محفوظ است. © ۱۴۰۳</p>
+      <p> © ۱۴۰۳ - تمامی حقوق محفوظ است.</p>
       <p><a href="https://github.com/miladnouri/simple-blog-template" target="_blank">این قالب با استفاده از ChatGPT ساخته شده و توسط میلاد نوری بهینه شده است.</a></p>
     </footer>
   </body>

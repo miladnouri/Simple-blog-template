@@ -58,7 +58,7 @@ nav ul {
 }
 
 /* Style the navigation list items */
-nav li {
+nav > ul > li {
   display: inline-block;
   margin: 0 0.5rem;
 }
@@ -178,17 +178,29 @@ main {
 
 .sidebar .card a {
   font-size: 0.82rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
+
+.sidebar .card a:hover {
+  transform: translateX(-2px);
+}
+
 
 
 /* Card */
 .card {
   background-color: #fff;
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 2rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 
 /* Style the article paragraphs */
@@ -280,19 +292,6 @@ footer p:last-of-type {
 
 
 
-.card {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 
 
 /* Common styles for all social media boxes */
@@ -315,7 +314,14 @@ footer p:last-of-type {
   margin: 0.3rem 0;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
+  transition: transform 0.3s ease;
 }
+
+.social-box i{
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
 
 .social-box-small {
   display: inline-block;
@@ -329,11 +335,13 @@ footer p:last-of-type {
   padding: 8px;
   filter: grayscale(100%);
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .social-box:hover, .social-box-small:hover {
   filter: grayscale(0);
   color: #fff;
+  transform: translateY(2px);
 }
 
 /* Styles for each social media box */
@@ -471,15 +479,20 @@ button:hover {
   overflow: hidden;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .photo:hover {
   filter: grayscale(0);
+  transform: translateY(-4px);
 }
 
 .photo img {
   width: 100%;
   vertical-align: middle;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .caption {
@@ -528,25 +541,6 @@ button:hover {
   margin: 0.5rem 0.1rem;
 }
 
-/* Style the link inside the tag */
-.tags-list li a {
-  background-color: #f1f3f4;
-  color: #555;
-  padding: 0.3rem 0.7rem;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-/* Style the link on hover */
-.tags-list li a:hover {
-  background-color: #eaeaea;
-}
-
-
-
-
-
-
 
 
 /* Article Tags and Share Buttons */
@@ -576,13 +570,30 @@ button:hover {
 }
 
 .article-tags .tags-list li a,
-.share-buttons .social-list li a {
+.share-buttons .social-list li a,
+.sidebar .tags-list li a {
   background-color: #f1f3f4;
   color: #555;
   padding: 0.3rem 0.7rem;
   border-radius: 10px;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
+
+.article-tags .tags-list li a{
+  display: inline-block;
+}
+
+.social-list li a:hover, .tags-list li a:hover {
+  background-color: #eaeaea;
+}
+
+.article-tags .tags-list li a:hover,
+.share-buttons .social-list li a:hover {
+  transform: translateY(-3px);
+
+}
+
 
 
 /* simple related articles */
@@ -634,9 +645,6 @@ button:hover {
   font-size: 1.2rem;
 }
 
-.social-list li a:hover {
-  background-color: #eaeaea;
-}
 
 
 /* error pages */
@@ -706,11 +714,14 @@ button:hover {
   margin: 0.3rem;
   text-align: center;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .podcast-buttons a:hover {
   background-color: #555;
+  transform: translateY(-3px);
 }
+
 
 /* Styling for each service's brand color on hover */
 .podcast-buttons .castbox:hover {
@@ -751,35 +762,35 @@ button:hover {
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .page-link:hover {
   background-color: #eaeaea;
+  transform: translateY(-3px);
 }
+
 
 .page-link.active {
   background-color: #333;
   color: #fff;
 }
 
-/* Gray Badge */
-.gray-badge {
-  float: left;
-  background-color: #b6b6b6;
-  color: #fff;
+.gray-badge, .red-badge {
   padding: 0.2rem 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.8rem;
+  float: left;
+  color: #fff;
+}
+/* Gray Badge */
+.gray-badge {
+  background-color: #b6b6b6;
 }
 
 /* Red Badge */
 .red-badge {
-  float: left;
   background-color: #ff0000;
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.5rem;
-  font-size: 0.8rem;
 }
 
 
@@ -859,8 +870,8 @@ button:hover {
 .timeline {
   position: relative;
   max-width: 96%;
-  margin: 24px 0;
-  padding: 12px 0;
+  margin: 12px 0;
+  padding: 6px 0;
 }
 
 .timeline::before {
@@ -879,7 +890,7 @@ button:hover {
 .timeline-item {
   position: relative;
   width: 50%;
-  padding: 1rem .3rem;
+  padding: .5rem .3rem;
   box-sizing: border-box;
 }
 
@@ -903,11 +914,17 @@ button:hover {
 
 .timeline-content {
   background: #fff;
-  padding: 1rem;
+  padding: .8rem 1rem;
   border-radius: 6px;
+  display: inline-block;
   position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
   /* width: 90%; */
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
 }
 
 .timeline-content p {
@@ -920,7 +937,76 @@ button:hover {
   font-size: .9rem;
 }
 
+.timeline-content a {
+  color: #1a73e8;
+  text-decoration: none;
+  border-bottom: 1px dotted #1a73e8;
+}
 
+.timeline-content a:hover {
+  color: #1557b0;
+  border-bottom-style: solid;
+}
+
+.timeline-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timeline-item:nth-child(even) .timeline-buttons {
+  direction: rtl;
+  justify-content: flex-end;
+}
+
+.timeline-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #f1f3f4;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.timeline-button i {
+  font-size: 0.9rem;
+}
+
+.timeline-thumbnail {
+  float: left;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin: 0 0.5rem 0.5rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-thumbnail {
+  float: right;
+  margin: 0 0 .5rem .5rem;
+}
+
+.timeline-item.with-thumbnail .timeline-content {
+  /* overflow: hidden; */
+}
+
+.timeline-content .timeline-thumbnail:hover {
+  transform: scale(3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.timeline-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #717171;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
 
 .timeline-item::before {
   content: '';
@@ -939,6 +1025,9 @@ button:hover {
   left: 0;
   transform: translateX(-50%);
 }
+
+
+
 
 /* Responsive timeline */
 @media screen and (max-width: 768px) {
@@ -968,6 +1057,7 @@ button:hover {
   .timeline::after {
     left: 20px;
   }
+
 }
 
 /* PrismJS 1.29.0

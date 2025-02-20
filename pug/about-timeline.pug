@@ -16,7 +16,7 @@ block content
         h2 درباره من
         .about-text
             p
-                img.about-photo(src='https://via.placeholder.com/200', alt='تصویر نمایه')
+                img.about-photo(src='https://picsum.photos/200/200?random=1', alt='تصویر نمایه')
                 | این یک وبلاگ است که به مقالات و مطالب مرتبط با برنامه‌نویسی و تکنولوژی می‌پردازد. ما سعی داریم
                 | اطلاعات مفید و کاربردی را در اختیار کاربران علاقه‌مند به این حوزه قرار دهیم. امیدواریم که
                 | از مطالب ما لذت ببرید و مفید بدانید. این وبلاگ با هدف ارتقاء دانش و آموزش جامعه برنامه‌نویسی و
@@ -38,12 +38,29 @@ block content
         .timeline
             .timeline-item
                 .timeline-content
-                    h3 ۱۴۰۲ - شروع پایان‌نامه
-                    p آغاز نگارش پایان‌نامه در حوزه [موضوع تحقیقاتی] و تکمیل پروژه‌های مرتبط.
-            .timeline-item
+                    h3
+                        | ۱۴۰۲ - شروع پایان‌نامه 
+                        span.timeline-badge درحال انجام
+                    p
+                        | آغاز نگارش پایان‌نامه در حوزه [موضوع تحقیقاتی] و تکمیل پروژه‌های مرتبط.
+                        br
+                        a(href="#details") مشاهده در سایت دانشگاه
+            .timeline-item.with-thumbnail
                 .timeline-content
+                    img.timeline-thumbnail(src="https://picsum.photos/60/60?random=1" alt="نمونه عکس")
                     h3 ۱۴۰۱ - تخصص در توسعه وب
-                    p مطالعه پیشرفته JavaScript و فریمورک‌های مدرن مانند ReactJS برای توسعه اپلیکیشن‌های تحت وب.
+                    p
+                        | مطالعه پیشرفته JavaScript و فریمورک‌های مدرن مانند ReactJS برای توسعه اپلیکیشن‌های تحت وب.
+                        br
+                        a(href="#details") اطلاعات بیشتر
+
+                    .timeline-buttons
+                        a.timeline-button(href="#repo" target="_blank")
+                            i.fab.fa-github
+                            | مخزن کد
+                        a.timeline-button(href="#demo" target="_blank")
+                            i.fas.fa-external-link-alt
+                            | دمو
             .timeline-item
                 .timeline-content
                     h3 ۱۴۰۰ - پروژه دانشگاهی با Python
@@ -60,12 +77,45 @@ block content
     section.timeline-section
         h2 تاریخچه پروژه‌های من
         .timeline
+
+            //- نمونه آیتم با عکس و لینک
+            .timeline-item.with-thumbnail
+                .timeline-content
+                    img.timeline-thumbnail(src="https://picsum.photos/60/60?random=1" alt="نمونه عکس")
+                    h3
+                        | ۱۴۰۲ - پروژه مدیریت مالی 
+                        span.timeline-badge درحال توسعه
+                    p
+                        | توسعه یک داشبورد مدیریت مالی با قابلیت تحلیل هزینه‌ها. 
+                        a(href="#details") مشاهده جزئیات
+                    .timeline-buttons
+                        a.timeline-button(href="#repo" target="_blank")
+                            i.fab.fa-github
+                            | مخزن کد
+                        a.timeline-button(href="#demo" target="_blank")
+                            i.fas.fa-external-link-alt
+                            | دمو
+
+            //- نمونه آیتم با آیکون
+            .timeline-item
+                .timeline-content
+                    h3
+                        i.fas.fa-certificate
+                        |  ۱۴۰۱ - گواهینامه تخصصی
+                    p
+                        | دریافت گواهینامه AWS Solutions Architect 
+                        i.fas.fa-external-link-alt
+
             .timeline-item
                 .timeline-content
                     h3 ۱۳۹۷ - اولین اسکریپت خودکارسازی
                     p توسعه یک اسکریپت ساده با  
                         a(href="https://www.python.org/" target="_blank") Python  
                         | برای پردازش داده‌های متنی و یادگیری اصول برنامه‌نویسی.
+            .timeline-item
+                .timeline-content
+                    h3 ۱۳۹۷ - نمونه توضیح کوتاه
+                    p توضیح کوتاه            
             .timeline-item
                 .timeline-content
                     h3 ۱۳۹۹ - توسعه اولین وب‌اپلیکیشن
